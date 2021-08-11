@@ -17,5 +17,11 @@ add_action('wp_die_handler', function($handler) {
         exit;
     }
 
+    if ( $query['action'] === 'switch_to_user' ) {
+        wp_redirect(get_bloginfo('wpurl') . $_SERVER['REQUEST_URI']);
+        exit;
+    }
+
     return $handler;
 });
+
