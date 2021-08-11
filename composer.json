@@ -1,0 +1,13 @@
+{
+    "name": "smeedijzer/smeedijzer-mu-user-switching-fix",
+    "description": "Fix: Switch back fails when Wordpress is in subdirectory and using custom login page",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smeedijzer",
+            "email": "50170696+huubl@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
