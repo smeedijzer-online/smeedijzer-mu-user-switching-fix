@@ -12,16 +12,15 @@
 add_action('wp_die_handler', function($handler) {
     parse_str($_SERVER['QUERY_STRING'], $query);
 
-    if ( $query['action'] === 'switch_to_olduser' ) {
+    if ( isset($query['action']) && $query['action'] === 'switch_to_olduser' ) {
         wp_redirect(get_bloginfo('wpurl') . $_SERVER['REQUEST_URI']);
         exit;
     }
 
-    if ( $query['action'] === 'switch_to_user' ) {
+    if ( isset($query['action']) && $query['action'] === 'switch_to_user' ) {
         wp_redirect(get_bloginfo('wpurl') . $_SERVER['REQUEST_URI']);
         exit;
     }
 
     return $handler;
 });
-
